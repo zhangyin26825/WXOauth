@@ -1,0 +1,44 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+
+  <filter>
+    <filter-name>wxFliter</filter-name>
+    <filter-class>com.weijuju.iag.wxfilter.WXFliter</filter-class>
+    <!--<init-param>-->
+    <!--  test  测试 true或者false 如果是测试不会调用授权，只会返回一个默认的openid
+      如果想更换 测试的openid 直接在授权的请求里，增加testopenid参数即可  -->
+      <!--<param-name>test</param-name>         -->
+      <!--<param-value>false</param-value>-->
+    <!--</init-param>-->
+
+    <!--<init-param>-->
+      <!--appid  微信授权的openid  没有 默认为 wx88a065d6eb1d505a   -->
+      <!--<param-name>appid</param-name>-->
+      <!--<param-value>wx88a065d6eb1d505a</param-value>-->
+    <!--</init-param>-->
+
+    <!--<init-param>-->
+    <!--oauthUrlDomain   授权验证服务器的域名 默认为  iag-oauth-test.weijuju.com   -->
+      <!--<param-name>oauthUrlDomain</param-name>-->
+      <!--<param-value>iag-oauth-test.weijuju.com</param-value>-->
+    <!--</init-param>-->
+
+    <!--<init-param>-->
+    <!--scope     snsapi_userinfo 或者snsapi_base   默认为  snsapi_userinfo   -->
+      <!--<param-name>scope</param-name>-->
+      <!--<param-value>snsapi_userinfo</param-value>-->
+    <!--</init-param>-->
+
+  </filter>
+
+  <filter-mapping>
+    <filter-name>wxFliter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+</web-app>
